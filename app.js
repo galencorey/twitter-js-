@@ -11,6 +11,8 @@ swig.setDefaults({ cache: false });
 
 app.listen(3000, function(){console.log("hi")});
 
+app.use(express.static('public'));
+
 app.use('/', function(req, res, next){
   var method = chalk.blue(req.method);
   var route = chalk.red(req.originalUrl);
@@ -20,10 +22,6 @@ app.use('/', function(req, res, next){
 });
 
 app.use('/', routes);
-
-
-
-
 
 
 // app.get('/',function(req, res){
