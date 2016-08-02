@@ -57,3 +57,20 @@ code {
 .content .by {
   font-weight: bold;
 }
+
+li{
+  list-style-type: none;
+  max-width: 600px;
+}
+
+.blue{
+  color: blue;
+  margin-bottom: 15px;
+  margin-left: 60px;
+}
+
+img{
+  max-width: 50px;
+  float: left;
+  margin-right: 10px;
+}
