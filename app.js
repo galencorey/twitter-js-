@@ -33,7 +33,7 @@ app.get('/',function(req, res){
   };
   res.render(__dirname + '/views/index.html', locals, function(err, output){
     if(err) throw err;
-    console.log(output);
+    res.send(output);
   });
 });
 
