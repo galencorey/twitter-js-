@@ -74,3 +74,8 @@ img{
   float: left;
   margin-right: 10px;
 }
+
+a {
+  color: black;
+  display: block;
+}

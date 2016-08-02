@@ -16,12 +16,12 @@
       <!-- display tweets here -->
       <h3>All Tweets</h3>
       {% for tweet in tweets %}
-        <div>
+        <a href="/tweets/{{tweet.id}}"><div>
         <img src = "/shanna_gregory.jpg">
-        <li><strong>{{tweet.name}}</strong></li>
+        <li><strong><a href="/users/{{tweet.name}}">{{tweet.name}}</a></strong></li>
         <li>{{tweet.content}}</li>
         <li class = "blue">Re-tweet</li>
-        </div>
+        </div></a>
       {% endfor %}
 
     </div>
