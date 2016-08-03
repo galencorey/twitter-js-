@@ -15,7 +15,8 @@ router.get('/users/:name', function(req, res) {
   //var id = req.params.id.replace("_", " ");
   var name = req.params.name;
   var tweets = tweetBank.find({name: name});
-  res.render( 'index', { tweets: tweets } );
+  res.render( 'index', { tweets: tweets, showForm: true, userPage:true } );
+  //document.getElementById('name_field').setAttribute('value', name);
 });
 
 router.get('/tweets/:id', function(req, res) {
