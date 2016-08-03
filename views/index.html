@@ -2,6 +2,18 @@
 
 {% block content %}
 
+{% if showForm %}
+  <form action="/tweets" method="POST">
+    <label for="name_field">Name:</label>
+    <input name="name" type="text" id="name_field" />
+
+    <label for="text_field">Text:</label>
+    <input name="text" type="text" id="text_field" style="width: 350px;" />
+
+    <input type="submit" value="Submit" />
+  </form>
+{% endif %}
+
   <div class="page-header">
     <h1>Welcome to Twitter.js!</h1>
   </div>
@@ -16,12 +28,12 @@
       <!-- display tweets here -->
       <h3>All Tweets</h3>
       {% for tweet in tweets %}
-        <a href="/tweets/{{tweet.id}}"><div>
+        <a href="/tweets/{{tweet.id}}">
         <img src = "/shanna_gregory.jpg">
         <li><strong><a href="/users/{{tweet.name}}">{{tweet.name}}</a></strong></li>
         <li>{{tweet.content}}</li>
         <li class = "blue">Re-tweet</li>
-        </div></a>
+        </a>
       {% endfor %}
 
     </div>
